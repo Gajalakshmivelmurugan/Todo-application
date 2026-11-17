@@ -1,0 +1,155 @@
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.app-container {
+    background: white;
+    width: 400px;
+    max-width: calc(100% - 40px);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+}
+
+.input-section input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+    border: 2px solid #66a6ff;
+    border-radius: 10px;
+    outline: none;
+}
+
+.input-section button {
+    background: #66a6ff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.input-section button:hover {
+    background: #557ed6;
+}
+
+.filter-section {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: #eee;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #66a6ff;
+    color: white;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-list li {
+    background: #f9f9f9;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.task-list li.completed .task-text {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.task-text {
+    flex: 1;
+    cursor: pointer;
+    overflow-wrap: anywhere;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.actions button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.actions .edit {
+    color: #ffa502;
+}
+
+.actions .delete {
+    color: #ff4757;
+}
+
+.clear-btn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    background: #ff4757;
+    color: white;
+    cursor: pointer;
+}
+
+.clear-btn:hover {
+    background: #e84118;
+}
+
+.empty-message {
+    text-align: center;
+    color: #888;
+    padding: 10px;
+}
